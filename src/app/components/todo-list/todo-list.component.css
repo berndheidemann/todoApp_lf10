@@ -1,0 +1,11 @@
+.ok_cell {
+  width: 40px;
+}
+
+.done {
+  color: #BAB8B8;
+}
+
+tr {
+  cursor: pointer;
+}

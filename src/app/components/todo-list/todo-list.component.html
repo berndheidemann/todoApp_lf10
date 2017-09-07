@@ -1,0 +1,43 @@
+<div class="row">
+
+
+  <h3 class="col-md-4">Todo-List</h3>
+  <div class="form-group col-md-4 pull-right">
+    <label class="control-label" for="prependedtext"></label>
+    <div class="">
+      <div class="input-group">
+        <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span>
+        </span>
+        <input [(ngModel)]="searchString" id="prependedtext" name="prependedtext" class="form-control" placeholder="Wonach suchen Sie?"
+          type="text">
+      </div>
+
+    </div>
+  </div>
+
+
+  <table class="table">
+
+    <thead>
+      <tr>
+        <th></th>
+        <th>ID</th>
+        <th>Bezeichnung</th>
+        <th>Kategorie</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tr *ngFor="let item of todoList | todoSearchFilter : searchString | todoListOrdering" (click)="toggleStatus(item)" [class.done]="item.done">
+      <td class="ok_cell"><span *ngIf="item.done" class="glyphicon glyphicon-ok"></span></td>
+      <td>{{item.id}}</td>
+      <td>{{item.label}}</td>
+      <td>{{item.category.label}}</td>
+      <td><a href="#" class="btn btn-sm btn-danger" (click)="deleteTodo(item.id)"><span class="glyphicon glyphicon-trash"></span>  </a></td>
+
+
+      <!--<app-todo-detail [value]="item"></app-todo-detail> -->
+
+
+    </tr>
+  </table>
+</div>

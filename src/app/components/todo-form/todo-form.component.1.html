@@ -1,0 +1,44 @@
+<div class="form-horizontal">
+
+  <!-- Form Name -->
+  <legend>Neues Todo anlegen</legend>
+
+  <!-- Text input-->
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="textinput">ID</label>
+    <div class="col-md-5">
+      <input id="textinput" [(ngModel)]="newTodo.id" name="textinput" type="text" placeholder="eindeutige Nummer" class="form-control input-md"
+        required="">
+
+    </div>
+  </div>
+
+  <!-- Text input-->
+  <div class="form-group">
+    <label class="col-md-4 control-label" [(ngModel)]="newTodo.label" for="textinput">Bezeichnung</label>
+    <div class="col-md-5">
+      <input id="textinput" name="textinput" type="text" placeholder="Was wollen Sie tun?" class="form-control input-md" required="">
+
+    </div>
+  </div>
+
+  <!-- Select Basic -->
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="selectbasic">Kategorie</label>
+    <div class="col-md-5">
+
+      <select [(ngModel)]="newTodo.category" class="form-control">
+            <option *ngFor="let cat of categories" [value]="cat">{{cat.label}}</option>
+          </select>
+    </div>
+  </div>
+
+  <!-- Button -->
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="singlebutton"></label>
+    <div class="col-md-4">
+      <button id="singlebutton" (click)="save(newTodo)" name="singlebutton" class="btn btn-primary">speichern</button>
+    </div>
+  </div>
+
+</div>
