@@ -6,7 +6,7 @@ import { TodoEntry } from '../models/todo-entry';
 })
 export class TodoSearchPipe implements PipeTransform {
 
-  transform(items: TodoEntry[], value: string): any[] {
+  transform(items: TodoEntry[], value: string): TodoEntry[] {
     if (!items) {
       return [];
     }

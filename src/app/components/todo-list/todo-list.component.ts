@@ -13,6 +13,8 @@ import { MessageBoxType } from '../../models/message-box-type.enum';
 })
 export class TodoListComponent implements OnInit {
 
+  ordering = 'todoListOrdering';
+
   searchString = '';
 
   constructor(private todoPersistanceService: TodoPersistanceService, private messageBoxService: MessageBoxService) {

@@ -23,14 +23,19 @@
         <th></th>
         <th>ID</th>
         <th>Bezeichnung</th>
+        <th>Fällig bis</th>
         <th>Kategorie</th>
         <th></th>
       </tr>
     </thead>
+
     <tr *ngFor="let item of todoList | todoSearchFilter : searchString | todoListOrdering" (click)="toggleStatus(item)" [class.done]="item.done">
       <td class="ok_cell"><span *ngIf="item.done" class="glyphicon glyphicon-ok"></span></td>
       <td>{{item.id}}</td>
       <td>{{item.label}}</td>
+      <td>
+        <app-todo-due-date [value]="item.dueDate"></app-todo-due-date>
+      </td>
       <td>{{item.category.label}}</td>
       <td><a href="#" class="btn btn-sm btn-danger" (click)="deleteTodo(item.id)"><span class="glyphicon glyphicon-trash"></span>  </a></td>
 

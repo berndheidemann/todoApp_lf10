@@ -6,6 +6,6 @@ export class TodoEntry {
 
 
 
-    constructor(public label?: string, public category?: TodoCategory) {
+    constructor(public label?: string, public category?: TodoCategory, public dueDate?: Date) {
     }
 }

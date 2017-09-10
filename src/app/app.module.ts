@@ -15,6 +15,8 @@ import { MessageBoxComponent } from './components/message-box/message-box.compon
 import { MessageBoxService } from './services/message-box.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TodoListOrderingPipe } from './pipes/todo-list-ordering.pipe'
+import { MyDatePickerModule } from 'mydatepicker';
+import { TodoDueDateComponent } from './components/todo-due-date/todo-due-date.component';
 
 @NgModule({
   declarations: [
@@ -26,10 +28,15 @@ import { TodoListOrderingPipe } from './pipes/todo-list-ordering.pipe'
     NavbarComponent,
     MessageBoxComponent,
     TodoListOrderingPipe,
+    TodoDueDateComponent,
 
   ],
   imports: [
-    BrowserModule, FormsModule, AppRoutingModule, BrowserAnimationsModule
+    BrowserModule,
+    FormsModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MyDatePickerModule
   ],
   providers: [TodoPersistanceService, TodoCategoriesService, MessageBoxService],
   bootstrap: [AppComponent]
