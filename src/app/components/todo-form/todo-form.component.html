@@ -1,7 +1,9 @@
 <div class="form-horizontal ">
 
   <!-- Form Name -->
-  <legend>Neues Todo anlegen</legend>
+  <legend>Neues Todo anlegen<span class="pull-right">    
+    <app-priority-chooser [currentlySelectedPriority]="newTodo.priority" (priorityUpdated)="setPriority($event)"></app-priority-chooser>
+  </span> </legend>
 
 
 
@@ -15,7 +17,6 @@
   <div class="form-group">
     <label class="col-md-4 control-label " for="selectbasic ">Fällig bis</label>
     <div class="col-md-5 ">
-
       <my-date-picker name="mydate" [options]="myDatePickerOptions" [(ngModel)]="dateStr" required></my-date-picker>
     </div>
   </div>

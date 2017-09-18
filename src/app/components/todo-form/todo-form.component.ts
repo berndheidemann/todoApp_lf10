@@ -60,4 +60,8 @@ export class TodoFormComponent implements OnInit {
     }
   }
 
+  setPriority(prio: number) {
+    this.newTodo.priority = prio;
+  }
+
 }

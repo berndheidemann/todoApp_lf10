@@ -62,8 +62,8 @@ export class TodoPersistanceService {
 
   generateTestData() {
     const todoList: TodoEntry[] = [];
-    todoList.push(new TodoEntry('Rasen mähen', this.todoCategoriesService.categories[0], new Date('2017/11/12')));
-    todoList.push(new TodoEntry('Spülmaschine ausräumen', this.todoCategoriesService.categories[0], new Date('2017/09/29')));
+    todoList.push(new TodoEntry('Rasen mähen', this.todoCategoriesService.categories[0], new Date('2017/11/12'), 1));
+    todoList.push(new TodoEntry('Spülmaschine ausräumen', this.todoCategoriesService.categories[0], new Date('2017/09/29'), 3));
     todoList.push(new TodoEntry('Fußballtraining absagen', this.todoCategoriesService.categories[3], new Date('2018/01/01')));
     todoList.push(new TodoEntry('externe Festplatte für Angular besorgen', this.todoCategoriesService.categories[2]));
     todoList.push(new TodoEntry('Rechnungen überweisen', this.todoCategoriesService.categories[1]));

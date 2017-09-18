@@ -20,6 +20,8 @@ import { MyDatePickerModule } from 'mydatepicker';
 import { TodoDueDateComponent } from './components/todo-due-date/todo-due-date.component';
 import { SettingsComponent } from './components/settings/settings.component';
 import { SettingsService } from './services/settings.service';
+import { PriorityChooserComponent } from './components/priority-chooser/priority-chooser.component';
+import { PriorityComponent } from './components/priority/priority.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { SettingsService } from './services/settings.service';
     MessageBoxComponent,
     TodoListOrderingPipe,
     TodoDueDateComponent,
-    SettingsComponent
+    SettingsComponent,
+    PriorityChooserComponent,
+    PriorityComponent
 
   ],
   imports: [
