@@ -3,9 +3,19 @@ import { async, ComponentFixture, TestBed, inject } from '@angular/core/testing'
 import { TodoFormComponent } from './todo-form.component';
 import { TodoPersistanceService } from '../../services/todo-persistance.service';
 import { AppModule } from '../../app.module';
+import { RouterModule } from '@angular/router';
+import { TodoCategory } from '../../models/todo-category';
+import { TodoDueDateComponent } from '../todo-due-date/todo-due-date.component';
+import { TodoEntry } from '../../models/todo-entry';
 
 
-class TodoServiceMock {
+class TodoDataServiceMock {
+
+  todoList: TodoEntry[] = [];
+
+  saveTodo(todo: TodoEntry) {
+    this.todoList.push(todo);
+  }
 
 }
 
@@ -15,7 +25,10 @@ describe('TodoFormComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [AppModule]
+      imports: [AppModule],
+      providers: [
+        { provide: TodoPersistanceService, useClass: TodoDataServiceMock }
+      ]
     })
       .compileComponents();
   }));
@@ -31,9 +44,9 @@ describe('TodoFormComponent', () => {
   });
 
   it('should save a new Todo', inject([TodoPersistanceService], (service: TodoPersistanceService) => {
-    component.newTodo.id = 1337777;
     component.newTodo.label = 'werde gut';
+    component.newTodo.category = new TodoCategory(122, 'foo');
     component.save(component.newTodo);
-    expect(service.todoList.find(i => i.id === 1337777).label).toBe('werde gut');
+    expect(service.todoList.filter(t => t.label === 'werde gut').length).toBe(1);
   }));
 });

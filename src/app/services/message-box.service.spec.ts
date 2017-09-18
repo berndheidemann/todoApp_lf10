@@ -1,11 +1,12 @@
 import { TestBed, inject } from '@angular/core/testing';
 
 import { MessageBoxService } from './message-box.service';
+import { AppModule } from '../app.module';
 
 describe('MessageBoxService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [MessageBoxService]
+      imports: [AppModule]
     });
   });
 

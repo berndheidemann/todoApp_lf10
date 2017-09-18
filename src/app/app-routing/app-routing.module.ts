@@ -3,8 +3,10 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes, RouterLinkActive } from '@angular/router';
 import { TodoListComponent } from '../components/todo-list/todo-list.component';
 import { TodoFormComponent } from '../components/todo-form/todo-form.component';
+import { SettingsComponent } from '../components/settings/settings.component';
 
 const routes: Routes = [
+
   {
     path: 'list',
     component: TodoListComponent,
@@ -17,6 +19,11 @@ const routes: Routes = [
     path: 'new',
     component: TodoFormComponent,
   },
+  {
+    path: 'settings',
+    component: SettingsComponent,
+  }
+
 ];
 
 

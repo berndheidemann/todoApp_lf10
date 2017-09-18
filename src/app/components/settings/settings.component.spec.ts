@@ -1,12 +1,11 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TodoDetailComponent } from './todo-detail.component';
-import { TodoEntry } from '../../models/todo-entry';
+import { SettingsComponent } from './settings.component';
 import { AppModule } from '../../app.module';
 
-describe('TodoDetailComponent', () => {
-  let component: TodoDetailComponent;
-  let fixture: ComponentFixture<TodoDetailComponent>;
+describe('SettingsComponent', () => {
+  let component: SettingsComponent;
+  let fixture: ComponentFixture<SettingsComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -16,9 +15,8 @@ describe('TodoDetailComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TodoDetailComponent);
+    fixture = TestBed.createComponent(SettingsComponent);
     component = fixture.componentInstance;
-    component.value = new TodoEntry('Welt');
     fixture.detectChanges();
   });
 

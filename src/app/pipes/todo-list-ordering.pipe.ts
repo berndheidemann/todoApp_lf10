@@ -1,14 +1,22 @@
 import { Pipe, PipeTransform } from '@angular/core';
 import { TodoEntry } from '../models/todo-entry';
+import { SettingsService } from '../services/settings.service';
 
 @Pipe({
   name: 'todoListOrdering'
 })
 export class TodoListOrderingPipe implements PipeTransform {
 
+  constructor(private SettingsService: SettingsService) {
+
+  }
+
   transform(items: TodoEntry[], value: string): TodoEntry[] {
     if (!items) {
       return [];
+    }
+    if (!this.SettingsService.listSort) {
+      return items;
     }
     return items.sort((t1, t2) => this.orderByIdAndStatus(t1, t2));
   }

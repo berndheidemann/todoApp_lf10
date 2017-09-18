@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TodoDueDateComponent } from './todo-due-date.component';
+import { AppModule } from '../../app.module';
 
 describe('TodoDueDateComponent', () => {
   let component: TodoDueDateComponent;
@@ -8,9 +9,9 @@ describe('TodoDueDateComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TodoDueDateComponent ]
+      imports: [AppModule]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

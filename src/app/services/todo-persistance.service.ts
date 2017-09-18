@@ -28,6 +28,7 @@ export class TodoPersistanceService {
     this.localStorage.setItem('nextId', String(next));
     return next - 1;
 
+
   }
 
   get todoList(): TodoEntry[] {

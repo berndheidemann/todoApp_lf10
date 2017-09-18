@@ -8,17 +8,10 @@ import { TodoPersistanceService } from '../../services/todo-persistance.service'
 })
 export class NavbarComponent implements OnInit {
 
-  constructor(private todoPersistanceService: TodoPersistanceService) { }
+  constructor() { }
 
   ngOnInit() {
   }
 
-  deleteAll() {
-    this.todoPersistanceService.deleteAll();
-  }
-
-  genTestData() {
-    this.todoPersistanceService.generateTestData();
-  }
 
 }

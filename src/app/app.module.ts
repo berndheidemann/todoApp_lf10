@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { APP_BASE_HREF } from '@angular/common';
 
 import { AppComponent } from './app.component';
 import { TodoListComponent } from './components/todo-list/todo-list.component';
@@ -17,6 +18,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TodoListOrderingPipe } from './pipes/todo-list-ordering.pipe'
 import { MyDatePickerModule } from 'mydatepicker';
 import { TodoDueDateComponent } from './components/todo-due-date/todo-due-date.component';
+import { SettingsComponent } from './components/settings/settings.component';
+import { SettingsService } from './services/settings.service';
 
 @NgModule({
   declarations: [
@@ -29,6 +32,7 @@ import { TodoDueDateComponent } from './components/todo-due-date/todo-due-date.c
     MessageBoxComponent,
     TodoListOrderingPipe,
     TodoDueDateComponent,
+    SettingsComponent
 
   ],
   imports: [
@@ -38,7 +42,15 @@ import { TodoDueDateComponent } from './components/todo-due-date/todo-due-date.c
     BrowserAnimationsModule,
     MyDatePickerModule
   ],
-  providers: [TodoPersistanceService, TodoCategoriesService, MessageBoxService],
+  providers: [
+    TodoPersistanceService,
+    TodoCategoriesService,
+    MessageBoxService,
+    SettingsService,
+    {
+      provide: APP_BASE_HREF, useValue: ''
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

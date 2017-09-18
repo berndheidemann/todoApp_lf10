@@ -1,16 +1,16 @@
 import { TestBed, inject } from '@angular/core/testing';
 
-import { TodoCategoriesService } from './todo-categories.service';
+import { SettingsService } from './settings.service';
 import { AppModule } from '../app.module';
 
-describe('TodoCategoriesService', () => {
+describe('SettingsService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [AppModule]
     });
   });
 
-  it('should be created', inject([TodoCategoriesService], (service: TodoCategoriesService) => {
+  it('should be created', inject([SettingsService], (service: SettingsService) => {
     expect(service).toBeTruthy();
   }));
 });
