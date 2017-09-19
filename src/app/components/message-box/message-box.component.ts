@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MessageBoxService } from '../../services/message-box.service';
-import { trigger, transition, style, animate, state } from '@angular/core';
+import { trigger, transition, style, animate, state } from '@angular/animations';
 import { MessageBoxType } from '../../models/message-box-type.enum';
 
 

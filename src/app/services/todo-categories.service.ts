@@ -5,6 +5,7 @@ import { TodoCategory } from '../models/todo-category';
 export class TodoCategoriesService {
 
   private _categories: TodoCategory[] = [];
+  currentCategory: number;
 
   constructor() {
     this._categories.push(new TodoCategory(1, 'Hausarbeit'));

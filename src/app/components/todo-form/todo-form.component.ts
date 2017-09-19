@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostBinding } from '@angular/core';
 import { TodoEntry } from '../../models/todo-entry';
 import { TodoPersistanceService } from '../../services/todo-persistance.service';
 import { TodoCategoriesService } from '../../services/todo-categories.service';
@@ -13,10 +13,9 @@ import { IMyDpOptions } from 'mydatepicker';
 @Component({
   selector: 'app-todo-form',
   templateUrl: './todo-form.component.html',
-  styleUrls: ['./todo-form.component.css']
+  styleUrls: ['./todo-form.component.css'],
 })
 export class TodoFormComponent implements OnInit {
-
   myDatePickerOptions: IMyDpOptions = {
     dateFormat: 'dd.mm.yyyy',
   };

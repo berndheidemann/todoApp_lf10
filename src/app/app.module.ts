@@ -22,6 +22,7 @@ import { SettingsComponent } from './components/settings/settings.component';
 import { SettingsService } from './services/settings.service';
 import { PriorityChooserComponent } from './components/priority-chooser/priority-chooser.component';
 import { PriorityComponent } from './components/priority/priority.component';
+import { CategoryChooserSideBarComponent } from './components/category-chooser-side-bar/category-chooser-side-bar.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { PriorityComponent } from './components/priority/priority.component';
     TodoDueDateComponent,
     SettingsComponent,
     PriorityChooserComponent,
-    PriorityComponent
+    PriorityComponent,
+    CategoryChooserSideBarComponent
 
   ],
   imports: [

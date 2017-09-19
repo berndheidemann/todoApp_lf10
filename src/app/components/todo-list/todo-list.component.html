@@ -21,7 +21,7 @@
     <thead>
       <tr>
         <th></th>
-        <th>Prio</th>
+        <th></th>
         <th>ID</th>
         <th>Bezeichnung</th>
         <th>Fällig bis</th>
@@ -41,7 +41,7 @@
         <app-todo-due-date [value]="item.dueDate"></app-todo-due-date>
       </td>
       <td>{{item.category.label}}</td>
-      <td><a *ngIf="showDelete" href="#" class="btn btn-sm btn-danger" (click)="deleteTodo(item.id)"><span class="glyphicon glyphicon-trash"></span>  </a></td>
+      <td><button *ngIf="showDelete" href="#" class="btn btn-sm btn-danger" (click)="deleteTodo(item.id)"><span class="glyphicon glyphicon-trash"></span>  </button></td>
 
 
       <!--<app-todo-detail [value]="item"></app-todo-detail> -->

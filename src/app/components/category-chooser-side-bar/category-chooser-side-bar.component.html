@@ -1,0 +1,17 @@
+<div *ngIf="isSideBarVisible">
+  <ul class="nav navi" [@sideBarAnimation]>
+    <li class="nav-item ">
+      <a class="nav-link active" (click)="select(0)">alle</a>
+    </li>
+    <li class="nav-item" *ngFor="let cat of categories">
+      <a class="nav-link" (click)="select(cat.id)">{{cat.label}}</a>
+    </li>
+  </ul>
+
+  <span (click)="hideSideBar()" class="sideBarToggle glyphicon glyphicon-chevron-left " aria-hidden="true "></span>
+
+</div>
+<div *ngIf="!isSideBarVisible " (click)="showSideBar() ">
+  <span class="sideBarToggle glyphicon glyphicon-chevron-right " aria-hidden="true "></span>
+
+</div>

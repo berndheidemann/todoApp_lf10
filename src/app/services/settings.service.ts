@@ -5,6 +5,7 @@ export class SettingsService {
 
   showDelete = true;
   listSort = false;
+  hideSidebar = false;
 
   constructor() { }
 
