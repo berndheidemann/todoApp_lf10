@@ -3,6 +3,7 @@ import { TodoCategoriesService } from '../../services/todo-categories.service';
 import { TodoCategory } from '../../models/todo-category';
 import { SettingsService } from '../../services/settings.service';
 import { trigger, transition, style, animate, state } from '@angular/animations';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-category-chooser-side-bar',
@@ -22,7 +23,7 @@ import { trigger, transition, style, animate, state } from '@angular/animations'
 })
 export class CategoryChooserSideBarComponent implements OnInit {
 
-  constructor(private TodoCategoriesService: TodoCategoriesService, private SettingsService: SettingsService) { }
+  constructor(private TodoCategoriesService: TodoCategoriesService, private SettingsService: SettingsService, private router: Router) { }
 
   ngOnInit() {
   }
@@ -33,6 +34,7 @@ export class CategoryChooserSideBarComponent implements OnInit {
 
   select(id: number) {
     this.TodoCategoriesService.currentCategory = id;
+    this.router.navigateByUrl('/list');
   }
 
   hideSideBar() {
@@ -45,6 +47,10 @@ export class CategoryChooserSideBarComponent implements OnInit {
 
   get isSideBarVisible(): boolean {
     return !this.SettingsService.hideSidebar;
+  }
+
+  get currentCategory() {
+    return this.TodoCategoriesService.currentCategory;
   }
 
 }

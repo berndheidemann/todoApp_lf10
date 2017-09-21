@@ -1,9 +1,9 @@
 <div *ngIf="isSideBarVisible">
   <ul class="nav navi" [@sideBarAnimation]>
-    <li class="nav-item ">
-      <a class="nav-link active" (click)="select(0)">alle</a>
+    <li class="nav-item" [class.aktiv]="currentCategory===0 || !currentCategory">
+      <a class="nav-link" (click)="select(0)">alle</a>
     </li>
-    <li class="nav-item" *ngFor="let cat of categories">
+    <li class="nav-item" *ngFor="let cat of categories" [class.aktiv]="currentCategory===cat.id">
       <a class="nav-link" (click)="select(cat.id)">{{cat.label}}</a>
     </li>
   </ul>
