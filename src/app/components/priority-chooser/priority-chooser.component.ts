@@ -16,8 +16,6 @@ export class PriorityChooserComponent implements OnInit {
   ngOnInit() {
   }
 
-
-
   select(prio: number) {
     if (this.currentlySelectedPriority !== prio) {
       this.priorityUpdated.emit(prio);

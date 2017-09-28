@@ -15,7 +15,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { MessageBoxComponent } from './components/message-box/message-box.component';
 import { MessageBoxService } from './services/message-box.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { TodoListOrderingPipe } from './pipes/todo-list-ordering.pipe'
+import { TodoListOrderingPipe } from './pipes/todo-list-ordering.pipe';
 import { MyDatePickerModule } from 'mydatepicker';
 import { TodoDueDateComponent } from './components/todo-due-date/todo-due-date.component';
 import { SettingsComponent } from './components/settings/settings.component';

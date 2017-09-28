@@ -1,8 +1,16 @@
 <div class="form-horizontal ">
 
   <!-- Form Name -->
-  <legend>Neues Todo anlegen<span class="pull-right">    
-    <app-priority-chooser [currentlySelectedPriority]="newTodo.priority" (priorityUpdated)="setPriority($event)"></app-priority-chooser>
+  <legend>Neues Todo anlegen<span class="pull-right"> 
+    
+    
+    <app-priority-chooser 
+      [currentlySelectedPriority]="newTodo.priority" 
+      (priorityUpdated)="setPriority($event)">
+  </app-priority-chooser>
+
+
+  
   </span> </legend>
 
 
