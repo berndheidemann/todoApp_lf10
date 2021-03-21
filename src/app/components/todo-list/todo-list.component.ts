@@ -41,9 +41,7 @@ export class TodoListComponent implements OnInit {
     this.messageBoxService.display('Eintrag gelöscht', MessageBoxType.success);
   }
 
-  get showDelete() {
-    return this.SettingsService.showDelete;
-  }
+
 
 
 }

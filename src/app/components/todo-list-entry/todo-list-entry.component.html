@@ -1,0 +1,13 @@
+
+<td class="ok_cell"><span *ngIf="item.done" class="glyphicon glyphicon-ok"></span></td>
+<td>
+  <app-priority [value]="item.priority"></app-priority>
+</td>
+<td>{{item.id}}</td>
+<td>{{item.label}}</td>
+<td>
+  <app-todo-due-date [value]="item.dueDate"></app-todo-due-date>
+</td>
+<td>{{item.category.label}}</td>
+<td><button *ngIf="showDelete" href="#" class="btn btn-sm btn-danger" (click)="deleteTodo(item.id)"><span class="glyphicon glyphicon-trash"></span>  </button></td>
+
