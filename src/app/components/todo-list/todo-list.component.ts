@@ -20,9 +20,7 @@ export class TodoListComponent implements OnInit {
 
 
   constructor(
-    private todoPersistanceService: TodoPersistanceService,
-    private messageBoxService: MessageBoxService,
-    private SettingsService: SettingsService) {
+    private todoPersistanceService: TodoPersistanceService) {
   }
 
   get todoList() {
@@ -36,10 +34,6 @@ export class TodoListComponent implements OnInit {
     this.todoPersistanceService.toggleStatus(todoEntry);
   }
 
-  deleteTodo(id: number) {
-    this.todoPersistanceService.deleteTodo(id);
-    this.messageBoxService.display('Eintrag gelöscht', MessageBoxType.success);
-  }
 
 
 
